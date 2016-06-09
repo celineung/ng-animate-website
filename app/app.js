@@ -1,4 +1,16 @@
-alert("Hello Céline");
+(function () {	
+  'use strict';
 
-var angular = require("angular");
-angular.module("app", []);
+  if (module.hot) {
+    module.hot.accept(function() {});
+    module.hot.dispose(function() {});
+  }
+
+	require('./scripts/modules/homepage/homepage');
+
+	angular.module("NgAppProject", [
+		'ngRoute',
+		'ng',
+		'Homepage'
+	]);
+})();
