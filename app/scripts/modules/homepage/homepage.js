@@ -2,6 +2,8 @@
 	'use strict';
 
 	require('./views/homepage.html');
+	
+	var homepageController = require('./controllers/HomepageController')
 
 	angular.module('Homepage', [
 		'ngRoute',
@@ -40,7 +42,7 @@
 		        resolve: {
 		        	deps: function() {
 		        		return require.ensure([], function (require) {
-		        			angular.module('Homepage').register.controller("HomepageController", require('./controllers/HomepageController'));
+		        			angular.module('Homepage').register.controller("HomepageController", homepageController);
 		        		}, '_homepage');
 		        	}
 		        }

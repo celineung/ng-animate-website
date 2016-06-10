@@ -1,9 +1,8 @@
 
 'use strict';
 
-module.exports = [
-	'$scope',
+module.exports =
 	function HomepageController($scope) {
 		console.log("in controller");
 	}
-];
+;
