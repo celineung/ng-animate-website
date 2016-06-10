@@ -11,7 +11,8 @@ var config_webpack = {
 		main: "./app.js",
 		vendor: [
 			'angular',
-			'angular-route'
+			'angular-route',
+			'bootstrap-loader'
 		]
 	},
 	output : {
@@ -19,28 +20,35 @@ var config_webpack = {
 		filename : "[name].js"
 	},
 	module: {
-	    loaders: [
-	        {
-	            test: /\.scss$/,
-	            loader: 'style-loader!raw-loader!sass-loader'
-	        },
-	        {
-                test: /\.html$/,
-                loader: 'ngtemplate-loader?relativeTo=' +  __dirname + '/app/!html-loader'
-            }
-	    ]
+			loaders: [
+					{
+								test: /\.html$/,
+								loader: 'ngtemplate-loader?relativeTo=' +  __dirname + '/app/!html-loader'
+						},
+						{ test: /\.css$/, loaders: [ 'style', 'css', 'postcss' ] },
+				{ test: /\.scss$/, loaders: [ 'style', 'css', 'postcss', 'sass' ] },
+				{
+					test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+					loader: "url?limit=10000"
+				},
+				{
+					test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+					loader: 'file'
+				},
+				{ test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' }
+			]
 	},
 	plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            filename: 'vendor.js'
-        }),
-        new webpack.NoErrorsPlugin(),
-        new WebpackNotifierPlugin({
-            excludeWarnings: true
-        })
-    ]
+				new webpack.HotModuleReplacementPlugin(),
+				new webpack.optimize.CommonsChunkPlugin({
+						name: 'vendor',
+						filename: 'vendor.js'
+				}),
+				new webpack.NoErrorsPlugin(),
+				new WebpackNotifierPlugin({
+						excludeWarnings: true
+				})
+		]
 };
 
 module.exports = config_webpack;
