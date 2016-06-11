@@ -12,16 +12,16 @@ module.exports = ['$location', function ($location) {
 	}
 }];
 
-AnimationsController.$inject = ['$scope'];
-function AnimationsController($scope) {
+AnimationsController.$inject = ['$scope', '$timeout'];
+function AnimationsController($scope, $timeout) {
 	var animationsController = this;
-	animationsController.fadeBool = true;
+	animationsController.animationBool = true;
 	animationsController.resetAnimation = resetAnimation;
 
 	function resetAnimation() {
-		animationsController.fadeBool = false;
-		setTimeout(function(){ 
-			animationsController.fadeBool = true; 
-		}, 0);
+		animationsController.animationBool = false;
+		$timeout(function(){ 
+			animationsController.animationBool = true; 
+		}, 600);
 	}
 }

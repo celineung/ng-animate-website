@@ -1,3 +1,4 @@
+@import './../../../styles/app';
 
 .instructions {
 	& > ul {
@@ -10,6 +11,7 @@
 			padding-bottom: 0px;
 		}
 	}
+
 	p
 	{
 		.highlight {
@@ -18,11 +20,32 @@
 		.fa-arrow-right {
 			padding-right: 10px;
 		}
-		table {
-			border: 1px solid black;
-		}
 	}
+
 	.conclusion {
 		padding-top: 30px;
+	}
+
+	.sum-up {
+		padding: 20px 0px;
+	}
+
+	table, tr, th, td {
+		border: 1px solid black;
+	}
+	table {
+		width: 100%;
+		tr {
+			th {
+				color: #fff;
+				background-color: $bright-red;
+			}
+			th, td {
+				padding: 10px 10px;
+			}
+		}
+		tbody:hover td[rowspan], tr:hover td {
+		   background: $light-grey-background-color; 
+		}
 	}
 }

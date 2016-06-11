@@ -14,6 +14,7 @@
 		}
 		& > li {
 			width: 70%;
+			cursor: pointer;
 			&.active a {
 				color: #fff;
 				background-color: $bright-red;
@@ -72,6 +73,34 @@
 		opacity:1;
 		&.ng-leave-active {
 			opacity:0;
+		}
+	}
+}
+
+.expand {
+	opacity:1;
+	border: 1px $bright-red solid;
+	background-color: #ee2759;
+	height: 100px;
+	width:100px;
+	margin: 30px auto;
+
+	&.ng-enter, &.fade.ng-leave {
+		transition: 0.7s linear all;
+	}
+
+	&.ng-enter {
+		height: 0px;
+		/* à la fin de l'entrée */
+		&.ng-enter-active {
+			height: 100px;
+		}
+	}
+
+	&.ng-leave {
+		height: 100px;
+		&.ng-leave-active {
+			height: 0px;
 		}
 	}
 }

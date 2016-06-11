@@ -1,6 +1,8 @@
 <h1 id="instructions">Instructions</h1>
 <div class="instructions">
-	<p>Angular allows you to use animations in your projet once you include the <span class="highlight">angular-animate</span> dependency.</p>
+	<p>
+		Angular allows you to use animations in your projet once you include the 
+		<span class="highlight">angular-animate</span> dependency.</p>
 	<p>There are two ways to make use of animations when ngAnimate is used: 
 		<ul>
 			<li>CSS</li>
@@ -11,11 +13,6 @@
 		Once you include ngAnimate in your directive, Angular will start to interpret directives (ng-repeat, ng-if, ng-show, etc) whose behaviour introduces a change in the DOM.
 	</p>
 	<p>
-		For CSS animations, we distinguish two types:
-		<ul>
-			<li>CSS based animations</li>
-			<li>Class based animations</li>
-		</ul>
 		For these directives, Angular will add CSS classes which looks like:
 		<ul>
 			<li>.ng-{EVENT}</li>
@@ -27,21 +24,97 @@
 		<i class="fa fa-arrow-right fa-1" aria-hidden="true"></i>
 		As a consequence, if one wants to add animation, he needs to override the corresponding classes added by Angular.
 	</p>
-	<p>
+	<p class="sum-up">
 		To sum up, this table indicates the classes to use for each directive:
-		<table>
-			<tr>
-	    <td>CSS Animation type</td>
-	    <td>Angular directive</td> 
-	    <td>Event</td>
-	    <td>Class</td>
-	  </tr>
-	  <tr>
-	    <td>Eve</td>
-	    <td>Jackson</td> 
-	    <td>94</td>
-	    <td>94</td>
-	  </tr>
-		</table>
 	</p>
+	<table>
+		<tbody>
+			<tr>
+		    <th>Angular directive</th> 
+		    <th>Event</th>
+		    <th>Class</th>
+		  </tr>
+		</tbody>
+		  <!-- first row -->
+	  <tbody>
+		  <tr>
+		    <td rowspan="3">ng-repeat</td> 
+		    <td>enter</td>
+		    <td>.ng-enter, .ng-enter-active</td>
+		  </tr>
+		  <tr>
+		  	<td>leave</td>
+		    <td>.ng-leave, .ng-enter-leave</td>
+		  </tr>
+		  <tr>
+		  	<td>move</td>
+		    <td>.ng-move, .ng-enter-move</td>
+		  </tr>
+	  </tbody>
+		  <!-- second row -->
+	  <tbody>
+		  <tr>
+		    <td rowspan="2">ng-view, ng-include, ng-switch, ng-if, ng-message</td> 
+		    <td>enter</td>
+		    <td>.ng-enter, .ng-enter-active</td>
+		  </tr>
+		  <tr>
+		  	<td>leave</td>
+		    <td>.ng-leave, .ng-enter-leave</td>
+		  </tr>
+	  </tbody>
+		  <!-- third row -->
+	  <tbody>
+		  <tr>
+		    <td rowspan="2">ng-class</td> 
+		    <td>add</td>
+		    <td>.ng-add, .ng-add-active</td>
+		  </tr>
+		  <tr>
+		  	<td>remove</td>
+		    <td>.ng-remove, .ng-enter-remove</td>
+		  </tr>
+	  </tbody>
+		  <!-- fourth row -->
+	  <tbody>
+		  <tr>
+		    <td rowspan="2">ng-show, ng-hide</td> 
+		    <td>add</td>
+		    <td>add class .ng-hide</td>
+		  </tr>
+		  <tr>
+		  	<td>remove</td>
+		    <td>remove class .ng-hide</td>
+		  </tr>
+	  </tbody>
+		  <!-- fifth row -->
+	  <tbody>
+		  <tr>
+		    <td rowspan="3">form, ng-model</td> 
+		    <td>valid</td>
+		    <td>ng-valid</td>
+		  </tr>
+		  <tr>
+		  	<td>invalid</td>
+		    <td>ng-invalid</td>
+		  </tr>
+		  <tr>
+		  	<td>[...]</td>
+		    <td>any other validations that are performed within the form or on the model itself</td>
+		  </tr>
+	  </tbody>
+		  <!-- sixth row -->
+	  <tbody>
+		  <tr>
+		    <td rowspan="2">ng-messages</td> 
+		    <td>active</td>
+		    <td>.ng-active</td>
+		  </tr>
+		  <tr>
+		  	<td>inactive</td>
+		    <td>.ng-inactive</td>
+		  </tr>
+	  </tbody>
+
+		</table>
 </div>
