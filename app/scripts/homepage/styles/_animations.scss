@@ -1,5 +1,9 @@
 @import './../../../styles/app';
 
+.sidebar {
+	padding-top: 30px;
+}
+
 .sidebar .tabbable {
 	ul.nav-stacked {
 		& > li:first-child {

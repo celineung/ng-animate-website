@@ -14,14 +14,14 @@ module.exports = ['$location', function ($location) {
 
 AnimationsController.$inject = ['$scope'];
 function AnimationsController($scope) {
-	var sidebarController = this;
-	sidebarController.fadeBool = true;
-	sidebarController.resetAnimation = resetAnimation;
+	var animationsController = this;
+	animationsController.fadeBool = true;
+	animationsController.resetAnimation = resetAnimation;
 
 	function resetAnimation() {
-		sidebarController.fadeBool = false;
+		animationsController.fadeBool = false;
 		setTimeout(function(){ 
-			sidebarController.fadeBool = true; 
+			animationsController.fadeBool = true; 
 		}, 0);
 	}
 }

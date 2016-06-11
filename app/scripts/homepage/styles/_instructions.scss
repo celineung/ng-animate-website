@@ -1,0 +1,28 @@
+
+.instructions {
+	& > ul {
+		padding-top: 10px;
+		padding-bottom: 15px;
+		li {
+			font-weight: bold;
+		}
+		&:last-of-type {
+			padding-bottom: 0px;
+		}
+	}
+	p
+	{
+		.highlight {
+			font-weight: bold;
+		}
+		.fa-arrow-right {
+			padding-right: 10px;
+		}
+		table {
+			border: 1px solid black;
+		}
+	}
+	.conclusion {
+		padding-top: 30px;
+	}
+}

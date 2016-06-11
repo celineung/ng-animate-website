@@ -1,13 +1,13 @@
 <div class="tab-pane active" id="fade-animation">
-            <button type="button" class="btn btn-info" ng-click="sidebarController.resetAnimation()">
+            <button type="button" class="btn btn-info" ng-click="animationsController.resetAnimation()">
               <i class="fa fa-play-circle" aria-hidden="true"></i>
               Play the animation
             </button>
-            <div ng-if="sidebarController.fadeBool" class="fade"></div>
+            <div ng-if="animationsController.fadeBool" class="fade"></div>
             <div class="code-display">
               <div class="col-md-6 col-sm-12 col-xs-12 html-content">
                 <div class="content">
-                    &lt;div ng-if="fadeBoolean" class="fade"&gt;&lt;/div&gt;
+                    &lt;div ng-if="animationsController.fadeBoolean" class="fade"&gt;&lt;/div&gt;
                 </div>
               </div>
               <div class="col-md-6 col-sm-12 col-xs-12 css-content">

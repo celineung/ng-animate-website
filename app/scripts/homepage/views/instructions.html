@@ -1,4 +1,47 @@
 <h1 id="instructions">Instructions</h1>
-<div>
-
+<div class="instructions">
+	<p>Angular allows you to use animations in your projet once you include the <span class="highlight">angular-animate</span> dependency.</p>
+	<p>There are two ways to make use of animations when ngAnimate is used: 
+		<ul>
+			<li>CSS</li>
+			<li>JavaScript.</li>
+		</ul>
+	</p>
+	<p>
+		Once you include ngAnimate in your directive, Angular will start to interpret directives (ng-repeat, ng-if, ng-show, etc) whose behaviour introduces a change in the DOM.
+	</p>
+	<p>
+		For CSS animations, we distinguish two types:
+		<ul>
+			<li>CSS based animations</li>
+			<li>Class based animations</li>
+		</ul>
+		For these directives, Angular will add CSS classes which looks like:
+		<ul>
+			<li>.ng-{EVENT}</li>
+			<li>.ng-{EVENT}-active</li>
+		</ul>
+		ng-show and ng-hide are the sole exceptions for whom Angular will not add the classes .ng-{EVENT} or .ng-{EVENT}-active, but will instead add the class: <span class="highlight">.ng-hide.</span>
+	</p>
+	<p class="conclusion">
+		<i class="fa fa-arrow-right fa-1" aria-hidden="true"></i>
+		As a consequence, if one wants to add animation, he needs to override the corresponding classes added by Angular.
+	</p>
+	<p>
+		To sum up, this table indicates the classes to use for each directive:
+		<table>
+			<tr>
+	    <td>CSS Animation type</td>
+	    <td>Angular directive</td> 
+	    <td>Event</td>
+	    <td>Class</td>
+	  </tr>
+	  <tr>
+	    <td>Eve</td>
+	    <td>Jackson</td> 
+	    <td>94</td>
+	    <td>94</td>
+	  </tr>
+		</table>
+	</p>
 </div>
