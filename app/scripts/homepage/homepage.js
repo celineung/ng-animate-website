@@ -1,10 +1,16 @@
 (function () {
 	'use strict';
 
-	require('./styles/sidebar.scss');
-	require('./views/sidebar.html');
+	require('./styles/homepage.scss');
 	
-	var sidebarController = require('./controllers/SidebarController')
+	require('./views/homepage.html');	
+	require('./views/instructions.html');	
+	require('./views/animations.html');
+	require('./views/tab-fade.html');
+	
+	var sidebarController = require('./controllers/SidebarController');
+	var animationsDirective = require('./directives/animationsDirective');
+	var instructionsDirective = require('./directives/instructionsDirective');
 
 	angular.module('Homepage', [
 		'ngRoute',
@@ -37,13 +43,15 @@
 		.config(['$routeProvider', function($routeProvider) {
 				$routeProvider
 					.when('/', {
-						templateUrl: 'scripts/homepage/views/sidebar.html',
+						templateUrl: 'scripts/homepage/views/homepage.html',
 						controller: 'SidebarController',
 						controllerAs: 'sidebarController',
 						resolve: {
 							deps: function() {
 								return require.ensure([], function (require) {
 									angular.module('Homepage').register.controller("SidebarController", sidebarController);
+									angular.module('Homepage').register.directive("animationsDirective", animationsDirective);
+									angular.module('Homepage').register.directive("instructionsDirective", instructionsDirective);
 								}, '_sidebar');
 							}
 						}

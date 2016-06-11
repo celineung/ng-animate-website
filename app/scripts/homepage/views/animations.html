@@ -1,4 +1,6 @@
-<div class="container sidebar">
+
+<h1 id="animations">Play with animations</h1>
+<div class="sidebar">
   <div class="tabbable">
       <ul class="nav nav-pills nav-stacked col-md-3 col-sm-3 col-xs-12">
         <li>Animations list</li>
@@ -8,17 +10,9 @@
       </ul>
       <div class="tab-content col-md-9 col-sm-9 col-xs-12">
           <div class="tab-pane active" id="fade-animation">
-            <button type="button" class="btn btn-info" ng-click="sidebarController.resetAnimation()">
-              <i class="fa fa-play-circle" aria-hidden="true"></i>
-              Play the animation
-            </button>
-            <div ng-if="sidebarController.fadeBool" class="fade"></div>
-            <div class="code-display">
-              <div class="col-md-6 col-sm-12 col-xs-12 html-content"><div class="content">abc</div></div>
-              <div class="col-md-6 col-sm-12 col-xs-12 css-content"><div class="content">abc</div></div>
-            </div>
+            <div ng-include="'scripts/homepage/views/tab-fade.html'"></div>
           </div>
           <div class="tab-pane" id="e">Secondo sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor rci quis tortor imperdiet venenatis. Aliquam in felis sit amet augue.</div>
       </div>
   </div><!-- /tabs -->
-</div><!--/.container-->
+</div>

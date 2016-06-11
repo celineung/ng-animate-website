@@ -1,4 +1,7 @@
-.top-navigation {
-	border-radius: 0px;
-	margin-bottom: 55px;
+.navbar .navbar-nav li, .navbar-brand {
+	cursor: pointer;
+}
+
+#instructions, #animations {
+	padding-top: 100px;
 }

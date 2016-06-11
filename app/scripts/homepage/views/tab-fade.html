@@ -1,0 +1,47 @@
+<div class="tab-pane active" id="fade-animation">
+            <button type="button" class="btn btn-info" ng-click="sidebarController.resetAnimation()">
+              <i class="fa fa-play-circle" aria-hidden="true"></i>
+              Play the animation
+            </button>
+            <div ng-if="sidebarController.fadeBool" class="fade"></div>
+            <div class="code-display">
+              <div class="col-md-6 col-sm-12 col-xs-12 html-content">
+                <div class="content">
+                    &lt;div ng-if="fadeBoolean" class="fade"&gt;&lt;/div&gt;
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12 col-xs-12 css-content">
+                <div class="content">
+                  <pre>
+.fade {
+  opacity:1;
+  border: 1px $bright-red solid;
+  background-color: #ee2759;
+  height: 100px;
+  width:100px;
+  margin: auto auto;
+
+  &.ng-enter, &.fade.ng-leave {
+    transition: 0.7s linear all;
+  }
+
+  &.ng-enter {
+    opacity: 0;
+    /* à la fin de l'entrée */
+    &.ng-enter-active {
+      opacity:1;
+    }
+  }
+
+  &.ng-leave {
+    opacity:1;
+    &.ng-leave-active {
+      opacity:0;
+    }
+  }
+}
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
