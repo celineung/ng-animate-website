@@ -7,7 +7,8 @@
 	require('./views/instructions.html');	
 	require('./views/animations.html');
 	require('./views/tab-fade.html');
-	require('./views/tab-expand.html');
+	require('./views/tab-pull-down.html');
+	require('./views/tab-zoom.html');
 	
 	var sidebarController = require('./controllers/SidebarController');
 	var animationsDirective = require('./directives/animationsDirective');

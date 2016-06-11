@@ -49,13 +49,17 @@
 	}
 }
 
-.fade {
+.red-rect-example {
 	opacity:1;
 	border: 1px $bright-red solid;
 	background-color: #ee2759;
 	height: 100px;
 	width:100px;
 	margin: 30px auto;
+}
+
+.fade {
+	@extend .red-rect-example;
 
 	&.ng-enter, &.fade.ng-leave {
 		transition: 0.7s linear all;
@@ -63,7 +67,6 @@
 
 	&.ng-enter {
 		opacity: 0;
-		/* à la fin de l'entrée */
 		&.ng-enter-active {
 			opacity:1;
 		}
@@ -77,13 +80,8 @@
 	}
 }
 
-.expand {
-	opacity:1;
-	border: 1px $bright-red solid;
-	background-color: #ee2759;
-	height: 100px;
-	width:100px;
-	margin: 30px auto;
+.pull-down {
+	@extend .red-rect-example;
 
 	&.ng-enter, &.fade.ng-leave {
 		transition: 0.7s linear all;
@@ -91,7 +89,6 @@
 
 	&.ng-enter {
 		height: 0px;
-		/* à la fin de l'entrée */
 		&.ng-enter-active {
 			height: 100px;
 		}
@@ -101,6 +98,36 @@
 		height: 100px;
 		&.ng-leave-active {
 			height: 0px;
+		}
+	}
+}
+
+.zoom {
+	@extend .red-rect-example;
+
+	&.ng-enter, &.fade.ng-leave {
+		transition: 0.7s linear all;
+	}
+
+	&.ng-enter {
+		margin: 30 0px;
+		height: 0px;
+		width: 0px;
+		&.ng-enter-active {
+			margin: 30px auto;
+			height: 100px;
+			width:100px;
+		}
+	}
+
+	&.ng-leave {
+		margin: 30px auto;
+		height: 100px;
+		width:100px;
+		&.ng-leave-active {
+			margin: 30 0px;
+			height: 0px;
+			width: 0px;
 		}
 	}
 }

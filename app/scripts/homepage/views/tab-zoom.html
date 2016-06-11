@@ -1,19 +1,19 @@
-<div class="tab-pane active" id="fade-animation">
+<div class="tab-pane active">
             <button type="button" class="btn btn-info" ng-click="animationsController.resetAnimation()">
               <i class="fa fa-play-circle" aria-hidden="true"></i>
               Play the animation
             </button>
-            <div ng-if="animationsController.animationBool" class="expand"></div>
+            <div ng-if="animationsController.animationBool" class="zoom"></div>
             <div class="code-display">
               <div class="col-md-6 col-sm-12 col-xs-12 html-content">
                 <div class="content">
-                    &lt;div ng-if="animationsController.animationBool" class="expand"&gt;&lt;/div&gt;
+                    &lt;div ng-if="animationsController.animationBool" class="zoom"&gt;&lt;/div&gt;
                 </div>
               </div>
               <div class="col-md-6 col-sm-12 col-xs-12 css-content">
                 <div class="content">
                   <pre>
-.expand {
+.zoom {
   opacity:1;
   border: 1px $bright-red solid;
   background-color: #ee2759;
@@ -26,17 +26,24 @@
   }
 
   &.ng-enter {
+    margin: 30 0px;
     height: 0px;
-    /* à la fin de l'entrée */
+    width: 0px;
     &.ng-enter-active {
+      margin: 30px auto;
       height: 100px;
+      width:100px;
     }
   }
 
   &.ng-leave {
+    margin: 30px auto;
     height: 100px;
+    width:100px;
     &.ng-leave-active {
+      margin: 30 0px;
       height: 0px;
+      width: 0px;
     }
   }
 }

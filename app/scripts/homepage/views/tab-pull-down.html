@@ -3,40 +3,40 @@
               <i class="fa fa-play-circle" aria-hidden="true"></i>
               Play the animation
             </button>
-            <div ng-if="animationsController.animationBool" class="fade"></div>
+            <div ng-if="animationsController.animationBool" class="pull-down"></div>
             <div class="code-display">
               <div class="col-md-6 col-sm-12 col-xs-12 html-content">
                 <div class="content">
-                    &lt;div ng-if="animationsController.animationBool" class="fade"&gt;&lt;/div&gt;
+                    &lt;div ng-if="animationsController.animationBool" class="pull-down"&gt;&lt;/div&gt;
                 </div>
               </div>
               <div class="col-md-6 col-sm-12 col-xs-12 css-content">
                 <div class="content">
                   <pre>
-.fade {
+.pull-down {
   opacity:1;
   border: 1px $bright-red solid;
   background-color: #ee2759;
   height: 100px;
   width:100px;
-  margin: auto auto;
+  margin: 30px auto;
 
   &.ng-enter, &.fade.ng-leave {
     transition: 0.7s linear all;
   }
 
   &.ng-enter {
-    opacity: 0;
+    height: 0px;
     /* à la fin de l'entrée */
     &.ng-enter-active {
-      opacity:1;
+      height: 100px;
     }
   }
 
   &.ng-leave {
-    opacity:1;
+    height: 100px;
     &.ng-leave-active {
-      opacity:0;
+      height: 0px;
     }
   }
 }
