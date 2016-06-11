@@ -1,19 +1,19 @@
 (function () {
 	'use strict';
 
-	require('./styles/homepage.scss')
-	require('./views/homepage.html');
+	require('./styles/sidebar.scss')
+	require('./views/sidebar.html');
 	
-	var homepageController = require('./controllers/HomepageController')
+	var sidebarController = require('./controllers/SidebarController')
 
-	angular.module('Homepage', [
+	angular.module('Sidebar', [
 		'ngRoute',
 		'ng'
 		])
 		.config([
 				'$controllerProvider', '$compileProvider', '$filterProvider', '$provide', '$injector',
 				function($controllerProvider, $compileProvider, $filterProvider, $provide, $injector) {
-					angular.module('Homepage').register = {
+					angular.module('Sidebar').register = {
 						controller: function(name, content) {
 							return $controllerProvider.register(name, content);
 						},
@@ -36,15 +36,15 @@
 			])
 		.config(['$routeProvider', function($routeProvider) {
 				$routeProvider
-					.when('/home', {
-						templateUrl: 'scripts/modules/homepage/views/homepage.html',
-						controller: 'HomepageController',
-						controllerAs: 'homepageController',
+					.when('/', {
+						templateUrl: 'scripts/modules/sidebar/views/sidebar.html',
+						controller: 'SidebarController',
+						controllerAs: 'sidebarController',
 						resolve: {
 							deps: function() {
 								return require.ensure([], function (require) {
-									angular.module('Homepage').register.controller("HomepageController", homepageController);
-								}, '_homepage');
+									angular.module('Sidebar').register.controller("SidebarController", sidebarController);
+								}, '_sidebar');
 							}
 						}
 					});

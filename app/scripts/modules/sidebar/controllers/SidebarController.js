@@ -2,7 +2,7 @@
 'use strict';
 
 module.exports =
-	function HomepageController($scope) {
+	function SidebarController($scope) {
 		console.log("in controller");
 	}
 ;

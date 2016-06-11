@@ -22,20 +22,26 @@ var config_webpack = {
 	module: {
 			loaders: [
 					{
-								test: /\.html$/,
-								loader: 'ngtemplate-loader?relativeTo=' +  __dirname + '/app/!html-loader'
-						},
-						{ test: /\.css$/, loaders: [ 'style', 'css', 'postcss' ] },
-				{ test: /\.scss$/, loaders: [ 'style', 'css', 'postcss', 'sass' ] },
-				{
-					test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-					loader: "url?limit=10000"
-				},
-				{
-					test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
-					loader: 'file'
-				},
-				{ test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' }
+						test: /\.html$/,
+						loader: 'ngtemplate?relativeTo=' +  __dirname + '/app/!html'
+					},
+					{ 
+						test: /\.css$/, loaders: [ 'style', 'css', 'postcss' ] 
+					},
+					{ 
+						test: /\.scss$/, loaders: [ 'style', 'css', 'postcss', 'sass' ] 
+					},
+					{
+						test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+						loader: "url?limit=10000"
+					},
+					{
+						test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+						loader: 'file'
+					},
+					{ 
+						test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' 
+					}
 			]
 	},
 	plugins: [
