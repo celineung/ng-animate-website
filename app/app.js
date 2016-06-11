@@ -8,13 +8,14 @@
 
   require('./scripts/modules/top-navigation/styles/navigation.scss');
 
-	require('./scripts/modules/sidebar/sidebar');
+	require('./scripts/modules/homepage/homepage');
 	require('./scripts/modules/top-navigation/directives/navigationDirective');
 
 	angular.module("NgAppProject", [
 		'ngRoute',
 		'ng',
-		'Sidebar'
+		'Homepage',
+		'ngAnimate'
 	])
 	.directive('topNavigationDirective', require('./scripts/modules/top-navigation/directives/navigationDirective'));
 })();

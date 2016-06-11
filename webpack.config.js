@@ -12,7 +12,8 @@ var config_webpack = {
 		vendor: [
 			'angular',
 			'angular-route',
-			'bootstrap-loader'
+			'bootstrap-loader',
+			'angular-animate'
 		]
 	},
 	output : {

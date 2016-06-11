@@ -1,15 +1,18 @@
 <div class="container">
   <div class="tabbable">
       <ul class="nav nav-pills nav-stacked col-sm-3">
-          <li class="active"><a data-target="#d" data-toggle="tab">One</a></li>
+          <li class="active"><a data-target="#fade" data-toggle="tab">Fade</a></li>
           <li><a data-target="#e" data-toggle="tab">Two</a></li>
           <li><a data-target="#f" data-toggle="tab">Twee</a></li>
       </ul>
       <div class="tab-content col-sm-9">
-          <div class="tab-pane active" id="d">Lorem ipsum dolor sit amet, rci quis tortor imperdiet venenatischaretra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero.</div>
+          <div class="tab-pane active" id="fade">
+            {{ sidebarController.fadeBool }}
+            <div ng-if="sidebarController.fadeBool" class="fade"></div>
+            <button ng-click="sidebarController.resetAnimation()">Play the animation</button>
+          </div>
           <div class="tab-pane" id="e">Secondo sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor rci quis tortor imperdiet venenatis. Aliquam in felis sit amet augue.</div>
           <div class="tab-pane" id="d">Thirdamuno, ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae. </div>
       </div>
-  </div>
-  <!-- /tabs -->
+  </div><!-- /tabs -->
 </div><!--/.container-->

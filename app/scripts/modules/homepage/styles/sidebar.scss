@@ -1,0 +1,32 @@
+.fade {
+
+	opacity:1;
+	border: 1px black solid;
+	background-color: pink;
+	height: 100px;
+	width:100px;
+	margin: auto auto;
+
+	&.ng-enter, &.fade.ng-leave {
+		transition: 0.7s linear all;
+	}
+
+	/* du début de l'entrée */
+	&.ng-enter {
+		opacity: 0;
+		/* à la fin de l'entrée */
+		&.ng-enter-active {
+			opacity:1;
+		}
+	}
+
+	/* du début de la sortie */
+	&.ng-leave {
+		opacity:1;
+		/* à la fin de la sortie */
+		&.ng-leave-active {
+			opacity:1;
+		}
+	}
+
+}

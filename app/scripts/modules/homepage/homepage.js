@@ -6,14 +6,14 @@
 	
 	var sidebarController = require('./controllers/SidebarController')
 
-	angular.module('Sidebar', [
+	angular.module('Homepage', [
 		'ngRoute',
 		'ng'
 		])
 		.config([
 				'$controllerProvider', '$compileProvider', '$filterProvider', '$provide', '$injector',
 				function($controllerProvider, $compileProvider, $filterProvider, $provide, $injector) {
-					angular.module('Sidebar').register = {
+					angular.module('Homepage').register = {
 						controller: function(name, content) {
 							return $controllerProvider.register(name, content);
 						},
@@ -37,13 +37,13 @@
 		.config(['$routeProvider', function($routeProvider) {
 				$routeProvider
 					.when('/', {
-						templateUrl: 'scripts/modules/sidebar/views/sidebar.html',
+						templateUrl: 'scripts/modules/homepage/views/sidebar.html',
 						controller: 'SidebarController',
 						controllerAs: 'sidebarController',
 						resolve: {
 							deps: function() {
 								return require.ensure([], function (require) {
-									angular.module('Sidebar').register.controller("SidebarController", sidebarController);
+									angular.module('Homepage').register.controller("SidebarController", sidebarController);
 								}, '_sidebar');
 							}
 						}
