@@ -1,0 +1,68 @@
+@import './../../../styles/app';
+
+.sidebar .tabbable {
+	ul.nav-stacked {
+		& > li:first-child {
+			color: $grey-font-color;
+			font-size: 1.2em;
+			margin-bottom: 10px;
+			text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+		}
+		& > li {
+			width: 70%;
+			&.active a {
+				color: #fff;
+				background-color: $bright-red;
+			}
+			a {
+				color: $bright-red;
+			}
+		}
+	}
+	.tab-content .tab-pane .code-display {
+		width: 100%;
+		height: 300px;
+		margin-top: 30px;
+		.html-content, .css-content {
+			height: 100%;
+			.content {
+				color: #333333;
+				padding: 10px 10px;
+				border-radius: 5px;
+				background-color: $light-grey-background-color;
+				border: 1px solid $light-grey-border-color;
+			}
+		}
+	}
+}
+
+.fade {
+	opacity:1;
+	border: 1px $bright-red solid;
+	background-color: #ee2759;
+	height: 100px;
+	width:100px;
+	margin: auto auto;
+
+	&.ng-enter, &.fade.ng-leave {
+		transition: 0.7s linear all;
+	}
+
+	&.ng-enter {
+		opacity: 0;
+		/* à la fin de l'entrée */
+		&.ng-enter-active {
+			opacity:1;
+		}
+	}
+
+	/* du début de la sortie */
+	&.ng-leave {
+		opacity:1;
+		/* à la fin de la sortie */
+		&.ng-leave-active {
+			opacity:0;
+		}
+	}
+
+}

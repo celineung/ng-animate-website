@@ -8,7 +8,7 @@ var WebpackNotifierPlugin = require('webpack-notifier');
 var config_webpack = {
 	context : __dirname + "/app",
 	entry : {
-		main: "./app.js",
+		main: "./scripts/app.js",
 		vendor: [
 			'angular',
 			'angular-route',

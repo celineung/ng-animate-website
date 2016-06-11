@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
 
-	require('./styles/sidebar.scss')
+	require('./styles/sidebar.scss');
 	require('./views/sidebar.html');
 	
 	var sidebarController = require('./controllers/SidebarController')
@@ -37,7 +37,7 @@
 		.config(['$routeProvider', function($routeProvider) {
 				$routeProvider
 					.when('/', {
-						templateUrl: 'scripts/modules/homepage/views/sidebar.html',
+						templateUrl: 'scripts/homepage/views/sidebar.html',
 						controller: 'SidebarController',
 						controllerAs: 'sidebarController',
 						resolve: {
