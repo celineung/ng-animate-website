@@ -88,16 +88,11 @@
 	}
 
 	&.ng-enter {
+		opacity: 0;
 		height: 0px;
 		&.ng-enter-active {
+			opacity: 1;
 			height: 100px;
-		}
-	}
-
-	&.ng-leave {
-		height: 100px;
-		&.ng-leave-active {
-			height: 0px;
 		}
 	}
 }
@@ -117,17 +112,6 @@
 			margin: 30px auto;
 			height: 100px;
 			width:100px;
-		}
-	}
-
-	&.ng-leave {
-		margin: 30px auto;
-		height: 100px;
-		width:100px;
-		&.ng-leave-active {
-			margin: 30 0px;
-			height: 0px;
-			width: 0px;
 		}
 	}
 }

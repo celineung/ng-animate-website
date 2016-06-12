@@ -25,6 +25,7 @@
     transition: 0.7s linear all;
   }
 
+  /* à l'entrée */
   &.ng-enter {
     opacity: 0;
     /* à la fin de l'entrée */
@@ -33,8 +34,10 @@
     }
   }
 
+  /* à la sortie */
   &.ng-leave {
     opacity:1;
+    /* à la fin de la sortie */
     &.ng-leave-active {
       opacity:0;
     }

@@ -25,25 +25,16 @@
     transition: 0.7s linear all;
   }
 
+  /* à l'entrée */
   &.ng-enter {
     margin: 30 0px;
     height: 0px;
     width: 0px;
+    /* à la fin de l'entrée */
     &.ng-enter-active {
       margin: 30px auto;
       height: 100px;
       width:100px;
-    }
-  }
-
-  &.ng-leave {
-    margin: 30px auto;
-    height: 100px;
-    width:100px;
-    &.ng-leave-active {
-      margin: 30 0px;
-      height: 0px;
-      width: 0px;
     }
   }
 }
